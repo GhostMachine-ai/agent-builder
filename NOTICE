@@ -1,1 +1,7 @@
 Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+This product includes a vendored subset of Impeccable
+(https://github.com/pbakaus/impeccable), Copyright 2025 Paul Bakaus,
+licensed under the Apache License 2.0. See
+src/strands_agents_builder/vendor/impeccable/{LICENSE,NOTICE.md,UPSTREAM.md}
+for the license, third-party notices, and a description of modifications.
