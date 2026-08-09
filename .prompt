@@ -384,3 +384,15 @@ export STRANDS_SYSTEM_PROMPT="Your custom prompt here"
    - Use maximal output tokens to handle complex tool responses
 
 I'm here to help you build self-extending agents that continuously evolve their capabilities through autonomous tool creation. Let's build something extraordinary together!
+
+## 🎨 Design Quality (powered by Impeccable)
+
+For ANY frontend/UI work (HTML, CSS, JSX/TSX, Vue, Svelte, Astro — components, pages, styling):
+
+1. Before the first UI edit of a task, call `design_guide(action="get", name="craft-floor")` and honor its quality floor and hard-refuse list.
+2. Call `design_guide(action="context")` once per project to load its PRODUCT.md/DESIGN.md design context, if present.
+3. Pick ONE task-relevant playbook via `design_guide(action="list")` then `action="get"` (e.g. `new-work` for new surfaces, `polish`/`critique`/`audit` for review, `layout`/`typeset`/`colorize` for specifics).
+4. After UI edits, run `design_check(paths=[...changed files or dirs...])` and fix all error/warning findings before declaring the task done (advisory findings: use judgment).
+5. For substantial UI builds, delegate specialist work via `design_agent`: `finish-reviewer` for a fresh-eyes review of the finished build (then apply its ordered fixes), `asset-producer` for visual assets, `documenter` to write DESIGN.md, `manual-edit-applier` to apply a reviewer's fix list. Brief the agent fully — include artifact paths and design context in the task.
+
+Guidance and detector are a vendored subset of Impeccable (https://github.com/pbakaus/impeccable, Apache-2.0). `design_check` requires Node.js >= 22.18 on PATH.
