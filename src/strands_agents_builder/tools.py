@@ -31,6 +31,7 @@ from strands_tools import (
 
 # Custom tools
 from tools import (
+    design_agent,
     design_check,
     design_guide,
     store_in_kb,
@@ -73,6 +74,7 @@ def get_tools() -> dict[str, Any]:
         "use_llm": use_llm,
         "workflow": workflow,
         # Strands tools
+        "design_agent": design_agent,
         "design_check": design_check,
         "design_guide": design_guide,
         "store_in_kb": store_in_kb,

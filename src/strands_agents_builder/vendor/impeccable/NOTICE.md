@@ -15,9 +15,9 @@ The `skill/reference/ios.md` and `skill/reference/android.md` platform reference
 This directory is a vendored subset of Impeccable (https://github.com/pbakaus/impeccable,
 Copyright 2025 Paul Bakaus, Apache-2.0), modified as follows by the strands-agents-builder project:
 
-- Only a subset of the upstream repository is included (detector CLI/engine and the compiled
-  skill guidance markdown); live browser mode, subagent definitions, and other harness-specific
-  trees are omitted. See `UPSTREAM.md` for the exact file map.
+- Only a subset of the upstream repository is included (detector CLI/engine, the compiled
+  skill guidance markdown, and the subagent definitions); live browser mode and other
+  harness-specific trees are omitted. See `UPSTREAM.md` for the exact file map.
 - `guidance/reference/live.md` and `guidance/reference/live-setup.md` are removed.
 - A stub `package.json` (`{"type": "module"}`) was added so the ESM CLI runs outside the
   upstream repository.

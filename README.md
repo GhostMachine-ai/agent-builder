@@ -75,6 +75,7 @@ Strands comes with a comprehensive set of built-in tools:
 - **calculator**: Perform mathematical operations
 - **cron**: Task scheduling with cron jobs *(not available on Windows)*
 - **current_time**: Get the current date and time
+- **design_agent**: Delegate design work to Impeccable's specialist subagents (finish reviewer, asset producer, documenter, edit applier)
 - **design_check**: Scan UI code for design anti-patterns with a deterministic detector *(requires Node.js >= 22.18)*
 - **design_guide**: Load design guidance playbooks and project PRODUCT.md/DESIGN.md context
 - **editor**: File editing operations like line edits, search, and undo
@@ -107,6 +108,7 @@ Strands Agent Builder ships with design-quality tooling derived from [Impeccable
 
 - **design_guide** exposes Impeccable's design playbooks lazily — the agent lists the catalog, fetches one playbook at a time (e.g. `craft-floor`, the quality floor it consults before any UI edit; `new-work` for new surfaces; `critique`/`polish` for review), and loads your project's design context. Works out of the box, no extra runtime needed.
 - **design_check** runs Impeccable's deterministic detector (59 rules for UI anti-patterns and quality issues) over HTML/CSS/JSX/TSX/Vue/Svelte/Astro files and returns structured findings. Requires Node.js >= 22.18 on PATH; everything else is bundled.
+- **design_agent** delegates design work to one of Impeccable's four specialist subagents — `finish-reviewer` (fresh-eyes review of a finished build), `asset-producer` (visual assets), `documenter` (writes DESIGN.md), and `manual-edit-applier` (applies review fixes precisely) — each running as a nested Strands agent with the tools its definition declares.
 
 Example prompts to try in the `strands` REPL:
 
